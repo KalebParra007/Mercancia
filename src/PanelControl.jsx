@@ -1,25 +1,49 @@
-import imgUser from './assets/usuario.png'
 import Card from './Card'
+import MenuLateral from './MenuLateral'
 const PanelControl = () => {
+    let envios=[
+        {
+            origen: 'Medellin',
+            destino: 'Bogotá',
+            id: 'PEDIDO2390'
+        },
+        {
+            origen: 'Medellin',
+            destino: 'Cali',
+            id: 'PEDIDO4258'
+        },
+        {
+            origen: 'Medellin',
+            destino: 'Necocli',
+            id: 'PEDIDO8536'
+        },
+        {
+            origen: 'Medellin',
+            destino: 'Bucaramanga',
+            id: 'PEDIDO9735'
+        },
+        {
+            origen: 'Medellin',
+            destino: 'Titiribi',
+            id: 'PEDIDO1238'
+        },
+        {
+            origen: 'Medellin',
+            destino: 'Cartagena',
+            id: 'PEDIDO1872'
+        }
+    ]
     return(
         <section className="panel-control">
-            <aside className="panel-control-aside">
-                <div>
-                    <img src={imgUser} alt="logo" />
-                </div>
-                <nav>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                </nav>
-            </aside>
+            <MenuLateral/>
             <div className="panel-control-contenido">
-                <Card/>
-                <Card/>
-                <Card/>
+                {
+                    envios.map((envios)=> {
+                        return <Card info={envios} />
+                    })
+                }
             </div>
-        </section>
+        </section> 
     )
 }
 
