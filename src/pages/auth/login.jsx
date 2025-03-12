@@ -1,6 +1,7 @@
 import './login.css'
-function login(){
+function Login(){
     return(
+        <div class="div-completo">
         <form class="modern-form">
   <div class="form-title">Sign Up</div>
 
@@ -95,7 +96,8 @@ function login(){
     </a>
   </div>
 </form>
+</div>
     )
 }
 
-export default login
+export default Login
