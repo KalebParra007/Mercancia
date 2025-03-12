@@ -1,4 +1,4 @@
-import imgUser from './assets/usuario.png'
+import imgUser from '../assets/usuario.png'
 function MenuLateral (){
     return(
     <aside className="panel-control-aside">
